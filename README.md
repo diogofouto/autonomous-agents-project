@@ -3,7 +3,7 @@
 
 This repository contains both the project's source code, as well as builds for Windows, Mac and Linux.
 
-The settings for the project can be changed in the "AASMA_Data" folder, in 'settings.json'.
+To run the project, go to the builds folder and download the version for your OS. To start the program, run the AASMA executable. The various settings for the project can be changed in the "AASMA_Data" folder, in 'settings.json'.
 
 The agent type can be set to:
 
