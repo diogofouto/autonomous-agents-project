@@ -1,4 +1,5 @@
-## Repo for AASMA 21/22 Group 9 project "Competitive and Cooperative Multi-Agent System to Play The Human-Knot Game", made by Alexandre Pires – 92414, Diogo Fouto – 93705, João Fonseca – 92497.
+## Repo for AASMA 21/22 Group 9 project "Competitive and Cooperative Multi-Agent System to Play The Human-Knot Game"
+### Made by Alexandre Pires – 92414, Diogo Fouto – 93705, João Fonseca – 92497.
 
 This repository contains both the project's source code, as well as builds for Windows, Mac and Linux.
 
