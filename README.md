@@ -5,7 +5,7 @@ This repository contains both the project's source code, as well as builds for W
 
 To run the project, go to the builds folder and download the version for your OS. To start the program, run the AASMA executable. The various settings for the project can be changed in the "AASMA_Data" folder, in 'settings.json'.
 
-The agent type can be set to:
+The catcher agent type can be set to:
 
 0 - Reactive Agent
 
@@ -19,6 +19,14 @@ The agent type can be set to:
 
 **Note:** The RL Agents were trained using the default settings, so their performance may not match the reported values if the environment is changed.
 
+The fleer agent type can be set to:
+
+0 - Random Agent
+
+1 - Greedy Agent
+
+2 - Randomly chosen between Random and Greedy
+
 **Controls:**
 
 Escape - New Round
@@ -26,3 +34,6 @@ Escape - New Round
 Space - Start round after timer ends (w/o autostart)
 
 Backspace - Reset settings to default
+
+###Source code
+This project was made using Unity Engine 2021.3.3f1, and therefore we do not guarantee it runs as expected using other versions. The resources and scripts we created can be found in the "Assets" folder, inside the source code.
