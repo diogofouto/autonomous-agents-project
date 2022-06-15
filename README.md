@@ -35,5 +35,5 @@ Space - Start round after timer ends (w/o autostart)
 
 Backspace - Reset settings to default
 
-###Source code
+### Source code
 This project was made using Unity Engine 2021.3.3f1, and therefore we do not guarantee it runs as expected using other versions. The resources and scripts we created can be found in the "Assets" folder, inside the source code.
