@@ -1,0 +1,100 @@
+behaviors:
+  CatcherCurriculumL:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 128
+      buffer_size: 2048
+      learning_rate: 0.0003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 256
+      num_layers: 2
+      vis_encode_type: simple
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    keep_checkpoints: 5
+    max_steps: 1000000000
+    time_horizon: 128
+    summary_freq: 20000
+    threaded: true
+environment_parameters:
+  team_size:
+    curriculum:
+      - name: 1Moving # This is the start of the first lesson
+        completion_criteria:
+          measure: reward
+          behavior: CatcherCurriculumL
+          signal_smoothing: true
+          min_lesson_length: 100
+          threshold: 1
+          require_reset: true
+        value:
+          sampler_type: uniform
+          sampler_parameters:
+            min_value: 1
+            max_value: 1
+      - name: 2Moving
+        completion_criteria:
+          measure: reward
+          behavior: CatcherCurriculumL
+          signal_smoothing: true
+          min_lesson_length: 100
+          threshold: 5
+          require_reset: true
+        value:
+          sampler_type: uniform
+          sampler_parameters:
+            min_value: 2
+            max_value: 2
+      - name: 3Moving
+        completion_criteria:
+          measure: reward
+          behavior: CatcherCurriculumL
+          signal_smoothing: true
+          min_lesson_length: 100
+          threshold: 10
+          require_reset: true
+        value:
+          sampler_type: uniform
+          sampler_parameters:
+            min_value: 3
+            max_value: 3
+      - name: 4Catching
+        completion_criteria:
+          measure: reward
+          behavior: CatcherCurriculumL
+          signal_smoothing: true
+          min_lesson_length: 100
+          threshold: 100
+          require_reset: true
+        value:
+          sampler_type: uniform
+          sampler_parameters:
+            min_value: 4
+            max_value: 4
+      - name: 5Catching
+        completion_criteria:
+          measure: reward
+          behavior: CatcherCurriculumL
+          signal_smoothing: true
+          min_lesson_length: 100
+          threshold: 250
+          require_reset: true
+        value:
+          sampler_type: uniform
+          sampler_parameters:
+            min_value: 5
+            max_value: 5
+      - name: 6+Catching
+        value:
+          sampler_type: uniform
+          sampler_parameters:
+            min_value: 6
+            max_value: 10

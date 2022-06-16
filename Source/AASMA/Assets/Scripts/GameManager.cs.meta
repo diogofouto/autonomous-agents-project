@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c40c863b85941d2489817eb4810f4467
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - outerWall: {instanceID: 0}
+  - innerWall: {instanceID: 0}
+  - fleer: {fileID: 3150968306236216619, guid: b7a2fcb358dc7e8479ad500bbafb4d03, type: 3}
+  - catcher: {fileID: 5479426152458600130, guid: cf79b42fdaa8e944fb12eb2dc0251191, type: 3}
+  - agentParentTransform: {instanceID: 0}
+  - rope: {fileID: 7092869270740757662, guid: e01d9b98750cf374f9b8d1057040db69, type: 3}
+  - pc: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
