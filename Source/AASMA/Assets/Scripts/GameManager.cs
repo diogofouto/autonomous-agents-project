@@ -444,7 +444,7 @@ public class GameManager : MonoBehaviour
             addAllAgentsReward(0.5f);
         }
         else if(inc < 0)
-            fleersCurrentlyCaught -= inc;
+            fleersCurrentlyCaught += inc;
             addAllAgentsReward(-0.5f);
     }
 
