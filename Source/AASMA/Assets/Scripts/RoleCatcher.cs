@@ -146,22 +146,22 @@ public class RoleCatcher : Catcher
         Vector3 catcherPosition = this.transform.position;
         Vector3 targetPosition = this.target.transform.position;
 
-        Vector3 dir = (targetPosition - catcherPosition * 1.2f);
+        Vector3 dir = 1.2f * (targetPosition - catcherPosition);
 
         Vector3 vectorPerpendicularToFleer;
 
         if (this.role == ROLE.OVERTAKING_END_LEFT)
         {
-            vectorPerpendicularToFleer = Vector3.Cross(targetPosition, Vector3.forward).normalized;
+            vectorPerpendicularToFleer =  2f * Vector3.Cross(targetPosition, Vector3.forward).normalized;
         }
         else
         {
-            vectorPerpendicularToFleer = Vector3.Cross(targetPosition, -Vector3.forward).normalized;
+            vectorPerpendicularToFleer =  2f * Vector3.Cross(targetPosition, -Vector3.forward).normalized;
         }
 
-        Debug.DrawRay(this.transform.position, dir + vectorPerpendicularToFleer * 2f, Color.yellow);
+        Debug.DrawRay(this.transform.position, dir + vectorPerpendicularToFleer, Color.yellow);
 
-        return dir + vectorPerpendicularToFleer * 2f;
+        return dir + vectorPerpendicularToFleer;
     }
 
     private Vector3 SelectMoveEndpoint()
