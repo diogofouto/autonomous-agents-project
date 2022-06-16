@@ -213,7 +213,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: d26c415d761f44c6391d552696743012, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: ed6edc98a1cda4605bb8b1caacaf6d65, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: CatcherCurriculumL
